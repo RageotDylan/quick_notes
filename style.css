@@ -1,0 +1,166 @@
+body {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, .03) 0,
+            rgba(255, 255, 255, .03) 1px,
+            transparent 1px,
+            transparent 2px);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 5em;
+    flex-wrap: wrap;
+}
+
+.container_note {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 25px;
+    max-width: 300px;
+    width: 300px;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    margin: 2em 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.container_note:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 7px 14px rgba(0, 0, 0, 0.15),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.title_note {
+    color: #ecf0f1;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 2px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.subtitle_note {
+    color: #bdc3c7;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.text_note {
+    color: #ecf0f1;
+    font-size: 0.9em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.container_style {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.color_container_note {
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.color_blue {
+    width: 15px;
+    /* Diamètre de la balle */
+    height: 15px;
+    /* Diamètre de la balle */
+    background-color: rgb(0, 81, 174);
+    /* Fond bleu */
+    border: 1px solid black;
+    /* Contour noir de 3px */
+    border-radius: 50%;
+    /* Rend l'élément circulaire */
+}
+
+.color_red {
+    width: 15px;
+    /* Diamètre de la balle */
+    height: 15px;
+    /* Diamètre de la balle */
+    background-color: rgb(179, 46, 46);
+    /* Fond bleu */
+    border: 1px solid black;
+    /* Contour noir de 3px */
+    border-radius: 50%;
+    /* Rend l'élément circulaire */
+}
+
+.color_green {
+    width: 15px;
+    /* Diamètre de la balle */
+    height: 15px;
+    /* Diamètre de la balle */
+    background-color: rgb(46, 130, 49);
+    /* Fond bleu */
+    border: 1px solid black;
+    /* Contour noir de 3px */
+    border-radius: 50%;
+    /* Rend l'élément circulaire */
+}
+
+textarea {
+    width: 100%; /* Prend toute la largeur de son conteneur */
+    max-width: 100%; /* Empêche le dépassement de la largeur du conteneur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+    resize: vertical; /* Permet uniquement le redimensionnement vertical */
+}
+
+/* Si vous voulez complètement empêcher le redimensionnement */
+textarea {
+    resize: none;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+}
+
+#searchBar::placeholder {
+    color: #bdc3c7;
+}
